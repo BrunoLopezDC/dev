@@ -6,6 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node src/server.js",
-    "test": "node --test"
+    "test": "c8 --check-coverage --lines 70 --functions 70 --branches 70 --statements 70 --reporter=text --reporter=html node --test"
+  },
+  "devDependencies": {
+    "c8": "^12.0.0"
   }
 }

@@ -11,6 +11,8 @@ npm start
 
 El servidor escucha en `http://localhost:3000` (se puede cambiar con `PORT`).
 
+`npm test` ejecuta las pruebas y genera cobertura de código en `coverage/`. El umbral mínimo configurado es 70% para líneas, funciones, ramas y sentencias.
+
 ## Endpoints
 
 | # | Método | Ruta | Acción |
