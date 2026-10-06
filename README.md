@@ -13,6 +13,17 @@ El servidor escucha en `http://localhost:3000` (se puede cambiar con `PORT`).
 
 `npm test` ejecuta las pruebas y genera cobertura de código en `coverage/`. El umbral mínimo configurado es 70% para líneas, funciones, ramas y sentencias.
 
+## Docker
+
+Construir y ejecutar la API localmente:
+
+```bash
+docker build -t mock-devops-api:local .
+docker run --rm -p 3000:3000 mock-devops-api:local
+```
+
+La API queda disponible en `http://localhost:3000`.
+
 ## Endpoints
 
 | # | Método | Ruta | Acción |
