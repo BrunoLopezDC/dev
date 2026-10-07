@@ -24,6 +24,22 @@ docker run --rm -p 3000:3000 mock-devops-api:local
 
 La API queda disponible en `http://localhost:3000`.
 
+## GitHub Actions
+
+El workflow de [.github/workflows/main.yml](.github/workflows/main.yml) ejecuta las pruebas y cobertura en cada `push` y `pull_request` hacia `main`. En un `push` exitoso a `main`, también publica la imagen en Docker Hub y la despliega en EC2.
+
+Configura estos GitHub Secrets en `Settings > Secrets and variables > Actions`:
+
+| Secret | Uso |
+|---|---|
+| `DOCKERHUB_USERNAME` | Usuario de Docker Hub |
+| `DOCKERHUB_TOKEN` | Personal Access Token de Docker Hub |
+| `EC2_HOST` | IP o DNS público de la instancia EC2 |
+| `EC2_USER` | Usuario SSH de Ubuntu, normalmente `ubuntu` |
+| `EC2_SSH_KEY` | Contenido completo de la clave privada SSH |
+
+El repositorio Docker debe llamarse `mock-devops-api`. La instancia EC2 debe tener Docker instalado y permitir tráfico entrante en los puertos `22` y `80`.
+
 ## Endpoints
 
 | # | Método | Ruta | Acción |
