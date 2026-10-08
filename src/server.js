@@ -51,7 +51,7 @@ export const createServer = () => {
 
     try {
       if (request.method === 'GET' && api === 'api' && resource === 'health') {
-        return sendJson(response, 200, { status: 'ok revision 1' , service: 'mock-devops-api' });
+        return sendJson(response, 200, { status: 'ok revision' , service: 'mock-devops-api' });
       }
 
       if (api !== 'api') return sendJson(response, 404, { error: 'Route not found' });

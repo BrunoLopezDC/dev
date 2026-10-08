@@ -21,7 +21,7 @@ const request = (path, options) => fetch(`${baseUrl}${path}`, {
 test('1. GET /api/health responde estado del servicio', async () => {
   const response = await request('/api/health');
   assert.equal(response.status, 200);
-  assert.equal((await response.json()).status, 'ok');
+  assert.equal((await response.json()).status, 'ok revision');
 });
 
 test('2. GET /api/users lista usuarios mock', async () => {
