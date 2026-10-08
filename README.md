@@ -66,3 +66,5 @@ También se validan errores por:
 - Stock insuficiente al crear una orden: `409`.
 - Nombres, correos o roles con tipo y contenido inválidos: `400`.
 - Cantidades cero, negativas, decimales o enviadas como texto: `400`.
+
+hola

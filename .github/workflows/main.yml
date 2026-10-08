@@ -78,4 +78,4 @@ jobs:
             docker rm -f mock-devops-api || true
             docker run -d --restart unless-stopped --name mock-devops-api -p 80:3000 "$IMAGE"
             docker image prune -af --filter "until=168h"
-            curl --fail --silent --show-error http://localhost/api/health
+            curl --fail --silent --show-error --retry 10 --retry-all-errors --retry-delay 2 http://localhost/api/health
